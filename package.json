@@ -1,12 +1,12 @@
 {
-  "name": "@categori/workbench-core",
-  "version": "0.1.0",
-  "description": "Local-first workbench shell and extension SDK",
+  "name": "@categori/studio-core",
+  "version": "0.2.0",
+  "description": "Local-first studio shell and extension SDK",
   "type": "module",
   "license": "Apache-2.0",
   "exports": {
     ".": "./src/index.js",
-    "./local": "./src/local-workbench.js",
+    "./local": "./src/local-studio.js",
     "./mock-provider": "./src/mock-provider.js",
     "./navigation": "./src/navigation.js",
     "./plugin-sdk": "./src/plugin-sdk.js",
@@ -26,7 +26,7 @@
     "test": "node --test test/*.test.js"
   },
   "dependencies": {
-    "@categori/workbench-contracts": "0.1.0"
+    "@categori/studio-contracts": "0.2.0"
   },
   "engines": {
     "node": ">=20"

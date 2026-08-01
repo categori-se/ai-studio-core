@@ -1,7 +1,7 @@
-import {assertProject, normalizeGatewayRequest} from "@categori/workbench-contracts";
+import {assertProject, normalizeGatewayRequest} from "@categori/studio-contracts";
 import {createMockProvider} from "./mock-provider.js";
 
-export function createLocalWorkbench({projects = [], provider = createMockProvider()} = {}) {
+export function createLocalStudio({projects = [], provider = createMockProvider()} = {}) {
   const registry = new Map(projects.map((project) => {
     const checked = assertProject(project);
     return [checked.id, checked];

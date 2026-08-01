@@ -4,7 +4,7 @@ export function renderProjectList(root, projects, {onSelect = () => {}} = {}) {
   }
   const document = root.ownerDocument;
   const section = document.createElement("section");
-  section.className = "workbench-core-projects";
+  section.className = "studio-core-projects";
   const heading = document.createElement("h1");
   heading.textContent = "Projects";
   const list = document.createElement("ul");

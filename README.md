@@ -1,6 +1,6 @@
-# Workbench Core
+# Studio Core
 
-A local-first, single-user workbench shell with a project registry, extension SDK, provider-adapter interface, deterministic mock provider, and reusable browser helpers.
+A local-first, single-user studio shell with a project registry, extension SDK, provider-adapter interface, deterministic mock provider, and reusable browser helpers.
 
 Hosted identity, tenant authorization, billing, paid connectors, private agent orchestration, deployment credentials, and production infrastructure are deliberately outside this package. The hosted product composes a pinned release; it is not a private fork.
 

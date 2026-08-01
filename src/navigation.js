@@ -8,7 +8,7 @@ function valid(value, pattern) {
   return typeof value === "string" && pattern.test(value) ? value : "";
 }
 
-export function readWorkbenchContext(search = globalThis.location?.search || "") {
+export function readStudioContext(search = globalThis.location?.search || "") {
   const parameters = new URLSearchParams(search);
   const evidenceFilter = parameters.get("evidence") ?? "";
   const estateFilter = parameters.get("estate") ?? "";
@@ -46,7 +46,7 @@ export function contextHref(path, {
 
 export function updateContextLinks(context, root = globalThis.document) {
   if (!root) return;
-  for (const link of root.querySelectorAll("a[data-workbench-context]")) {
+  for (const link of root.querySelectorAll("a[data-studio-context]")) {
     const nextContext = {...context};
     if ("contextClearApplication" in link.dataset) nextContext.applicationId = "";
     if ("contextClearRun" in link.dataset) nextContext.runId = "";

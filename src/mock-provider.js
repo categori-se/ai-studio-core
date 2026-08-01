@@ -1,11 +1,11 @@
-import {normalizeGatewayRequest} from "@categori/workbench-contracts";
+import {normalizeGatewayRequest} from "@categori/studio-contracts";
 import {defineProviderAdapter} from "./plugin-sdk.js";
 
 export function createMockProvider({latencyMs = 0} = {}) {
   return defineProviderAdapter({
     id: "mock-provider",
     name: "Mock provider",
-    version: "0.1.0",
+    version: "0.2.0",
     capabilities: ["plan", "edit", "evaluate", "extract", "embed"],
     async invoke(input) {
       const request = normalizeGatewayRequest(input);

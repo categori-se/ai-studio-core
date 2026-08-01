@@ -1,6 +1,6 @@
 {
   "name": "@categori/studio-core",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Local-first studio shell and extension SDK",
   "type": "module",
   "license": "Apache-2.0",
@@ -26,9 +26,9 @@
     "test": "node --test test/*.test.js"
   },
   "dependencies": {
-    "@categori/studio-contracts": "0.2.0"
+    "@categori/studio-contracts": "0.3.0"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   }
 }

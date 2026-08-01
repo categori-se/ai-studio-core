@@ -1,0 +1,34 @@
+{
+  "name": "@categori/workbench-core",
+  "version": "0.1.0",
+  "description": "Local-first workbench shell and extension SDK",
+  "type": "module",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./src/index.js",
+    "./local": "./src/local-workbench.js",
+    "./mock-provider": "./src/mock-provider.js",
+    "./navigation": "./src/navigation.js",
+    "./plugin-sdk": "./src/plugin-sdk.js",
+    "./ui-shell": "./src/ui-shell.js",
+    "./styles.css": "./styles.css"
+  },
+  "files": [
+    "src",
+    "styles.css",
+    "README.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@categori/workbench-contracts": "0.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

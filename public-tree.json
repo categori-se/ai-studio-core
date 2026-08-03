@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "repository": "categori-se/studio-core",
+  "files": [
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    ".nvmrc",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "SECURITY.md",
+    "bin/studio.js",
+    "package.json",
+    "public-tree.json",
+    "scripts/check-public-tree.mjs",
+    "src/index.js",
+    "src/local-studio.js",
+    "src/mock-provider.js",
+    "src/navigation.js",
+    "src/plugin-sdk.js",
+    "src/project-files.js",
+    "src/ui-shell.js",
+    "styles.css",
+    "test/core.test.js",
+    "test/project-files.test.js"
+  ]
+}

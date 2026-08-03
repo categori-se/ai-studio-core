@@ -1,19 +1,24 @@
 {
   "name": "@categori/studio-core",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Local-first studio shell and extension SDK",
   "type": "module",
   "license": "Apache-2.0",
+  "bin": {
+    "studio": "./bin/studio.js"
+  },
   "exports": {
     ".": "./src/index.js",
     "./local": "./src/local-studio.js",
     "./mock-provider": "./src/mock-provider.js",
     "./navigation": "./src/navigation.js",
     "./plugin-sdk": "./src/plugin-sdk.js",
+    "./project-files": "./src/project-files.js",
     "./ui-shell": "./src/ui-shell.js",
     "./styles.css": "./styles.css"
   },
   "files": [
+    "bin",
     "src",
     "styles.css",
     "README.md",
@@ -23,10 +28,12 @@
     "NOTICE"
   ],
   "scripts": {
+    "check:public-tree": "node scripts/check-public-tree.mjs",
     "test": "node --test test/*.test.js"
   },
   "dependencies": {
-    "@categori/studio-contracts": "0.3.0"
+    "@categori/studio-contracts": "0.4.0",
+    "yaml": "2.9.0"
   },
   "engines": {
     "node": ">=24"

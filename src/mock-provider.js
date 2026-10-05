@@ -7,7 +7,7 @@ export function createMockProvider({latencyMs = 0} = {}) {
   const provider = defineProviderAdapter({
     id: "mock-provider",
     name: "Mock provider",
-    version: "0.4.0",
+    version: "0.5.0",
     capabilities: ["plan", "edit", "evaluate", "extract", "embed"],
     async invoke(input) {
       const request = normalizeGatewayRequest(input);

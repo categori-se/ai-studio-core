@@ -8,6 +8,7 @@ import {
   defineStudioPlugin
 } from "../src/index.js";
 import {contextHref, readStudioContext} from "../src/navigation.js";
+import {parseStudioDocument} from "../src/project-files.js";
 
 const project = {
   schemaVersion: 1,
@@ -195,7 +196,17 @@ test("public CI scans first and the source quick start pins exact release tags",
   assert.ok(workflow.includes("npm run check:public-tree --prefix studio-core"));
   assert.ok(workflow.indexOf("check:public-tree") < workflow.indexOf("npm install"));
 
+  const packageMetadata = JSON.parse(await readFile(new URL("../package.json", import.meta.url), "utf8"));
+  const dependency = "@categori/studio-contracts";
+  assert.equal(packageMetadata.dependencies[dependency], packageMetadata.version);
+  const ci = parseStudioDocument(workflow, {filename: "ci.yml"});
+  const checkouts = Object.values(ci.jobs).flatMap((job) => job.steps || [])
+    .filter((step) => step.with?.repository === "categori-se/ai-studio-contracts");
+  assert.equal(checkouts.length, 1, "CI must select one exact Contracts release");
+  assert.equal(checkouts[0].with.ref, `v${packageMetadata.dependencies[dependency]}`,
+    "CI must test the same Contracts release declared by the package");
+
   const readme = await readFile(new URL("../README.md", import.meta.url), "utf8");
-  assert.equal((readme.match(/git clone --branch v0\.4\.0 --depth 1/g) || []).length, 2);
+  assert.equal((readme.match(/git clone --branch v0\.5\.0 --depth 1/g) || []).length, 2);
   assert.doesNotMatch(readme, /git clone https:\/\/github\.com\/categori-se\/studio-/);
 });

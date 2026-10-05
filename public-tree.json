@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "repository": "categori-se/studio-core",
+  "repository": "categori-se/ai-studio-core",
   "files": [
     ".github/workflows/ci.yml",
     ".gitignore",

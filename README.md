@@ -63,15 +63,15 @@ All four values are non-negative safe integers. A run may omit its budget and in
 Node.js 24 or later is required. Until the first npm release, clone Contracts and Core as sibling directories and install the local contract package explicitly:
 
 ```bash
-git clone --branch v0.4.0 --depth 1 https://github.com/categori-se/studio-contracts.git
-git clone --branch v0.4.0 --depth 1 https://github.com/categori-se/studio-core.git
+git clone --branch v0.4.0 --depth 1 https://github.com/categori-se/ai-studio-contracts.git
+git clone --branch v0.4.0 --depth 1 https://github.com/categori-se/ai-studio-core.git
 cd studio-core
 npm install --no-save --package-lock=false ../studio-contracts
 npm test
 node ./bin/studio.js --help
 ```
 
-The release-tag checkouts keep the local dependency graph on the reviewed 0.4.0 line. The `--no-save` and `--package-lock=false` flags keep the published dependency declaration unchanged while working from source. For a complete project manifest to inspect, continue with the [`studio-examples` quick start](https://github.com/categori-se/studio-examples#source-quick-start).
+The release-tag checkouts keep the local dependency graph on the reviewed 0.4.0 line. The `--no-save` and `--package-lock=false` flags keep the published dependency declaration unchanged while working from source. For a complete project manifest to inspect, continue with the [`studio-examples` quick start](https://github.com/categori-se/ai-studio-examples#source-quick-start).
 
 ## Public core and managed control plane
 
@@ -83,4 +83,4 @@ You do not need the hosted service to use the CLI, adapter SDK, mock provider, m
 
 `package.json` identifies this source line as version 0.4.0. A checkout is the published v0.4.0 source release only when the repository's `v0.4.0` tag resolves to that exact commit; otherwise treat `main` as development. Earlier tags remain available for comparison and compatibility testing. The package has not been published to npm, so pin an exact Git tag or commit when consuming it.
 
-[Open an issue](https://github.com/categori-se/studio-core/issues) for a reproducible local workflow, adapter limitation, or proposed extension point. Contributions must keep the core local-first and provider-neutral, include deterministic tests, and follow [`CONTRIBUTING.md`](./CONTRIBUTING.md). The repository is licensed under the Apache License, Version 2.0.
+[Open an issue](https://github.com/categori-se/ai-studio-core/issues) for a reproducible local workflow, adapter limitation, or proposed extension point. Contributions must keep the core local-first and provider-neutral, include deterministic tests, and follow [`CONTRIBUTING.md`](./CONTRIBUTING.md). The repository is licensed under the Apache License, Version 2.0.

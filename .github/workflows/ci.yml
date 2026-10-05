@@ -26,7 +26,7 @@ jobs:
       - name: Check out exact Contracts release
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: categori-se/studio-contracts
+          repository: categori-se/ai-studio-contracts
           ref: v0.4.0
           path: studio-contracts
 
